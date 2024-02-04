@@ -1,0 +1,157 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+@import url('./variables.css');
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+@import url('./reset.css');
+
+/*-----------------------------------*\
+  #TYPOGRAPHY
+\*-----------------------------------*/
+@import url('./typography.css');
+
+/*-----------------------------------*\
+  #TYPOGRAPHY
+\*-----------------------------------*/
+@import url('./base.css');
+
+/*-----------------------------------*\
+  #LOGIN COMPONENT
+\*-----------------------------------*/
+@import url('./login.css');
+
+
+.header-primary {
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    display: flex;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(0.5rem);
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    max-width: 1700px;
+    z-index: 200;
+}
+.logo-container{
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    
+}
+
+
+.button{
+    background: var(--segmented-control-selected-label-color);
+    color: var(--background);
+}
+.save-button{
+    padding: 6px 14px 6px 14px;
+    border-radius: 25px;
+}
+.profile-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 18px;
+    padding-left: 25px;
+    position: relative;
+    top: 0;
+    background-image: url('/images/login-bg-pattern.png');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+}
+.profile{
+    height: 200px;
+    width: 200px;
+    border-radius: var(--border-radius-small);
+    background: #212121;
+    border: 1px solid var(--border-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.profile img{
+    object-fit: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+.img-area{
+    height: 86px;
+    width: 89px;
+    border-radius: 10px;
+    background: var(--border-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed gray;
+}
+.upload-button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.img-area img{
+    object-fit: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    position: relative;
+}
+.name-profile{
+    font-size: medium;
+}
+.profile input{
+    display: none;
+}
+@media only screen and (max-width: 767px){
+    .profile-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: min-content;
+    }
+    .end-profile{
+        position: relative;
+        
+    }
+    .profile{
+        width: 95%;
+        height: 230px;
+        margin-bottom: 10px;
+    }
+    .profile img{
+        height: 110px;
+        width: 110px;
+    }
+    .img-area{
+        height: 110px;
+        width: 110px;
+    }
+    .img-area img{
+        height: 110px;
+        width: 110px;
+    }
+}
+@media only screen and (min-width: 600px){
+    .profile-container{
+        padding-left: 85px;
+    }
+}
