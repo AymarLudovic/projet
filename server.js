@@ -5,6 +5,7 @@ const fs = require('fs');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const multer = require('multer');
+const port = process.env.PORT || 3001;
 
 const { v4: uuidv4 } = require('uuid');
 const { Client, Account, Databases, ID, Query, Storage  } = require('appwrite');
@@ -699,6 +700,4 @@ app.post('/place-order', (req, res) => {
     });
 });
 
-app.listen(3000, '0.0.0.0', function() {
-  console.log('Serveur en écoute sur le port 3000');
-});
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
